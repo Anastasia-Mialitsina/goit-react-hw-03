@@ -1,0 +1,50 @@
+.list {
+display: flex;
+gap: 10px;
+list-style: none;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 15px;
+  border: 2px solid #ccc; 
+  border-radius: 8px;
+  background-color: #fafafa; 
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column; 
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; 
+}
+
+.name {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.number {
+  margin-left: 10px;
+  color: #555;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  color: darkred;
+}
