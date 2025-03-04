@@ -4,7 +4,7 @@
   padding: 2rem;
   text-align: center;
 }
-
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+*/
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+}
+.container {
+  background: rgba(255, 255, 255, 0.1); 
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.6); 
+  backdrop-filter: blur(10px); 
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 
+               0 0 20px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.2);
+}
+

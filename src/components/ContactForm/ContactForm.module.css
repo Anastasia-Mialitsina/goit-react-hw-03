@@ -4,44 +4,85 @@
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  animation: fadeIn 7s forwards; 
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .fieldWrapper {
   margin-bottom: 15px;
 }
-
 label {
   margin-bottom: 5px;
   font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 
+               0 0 20px rgba(255, 255, 255, 0.5), 
+               0 0 30px rgba(255, 255, 255, 0.2);
 }
-
 .input {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
   padding: 10px;
-  width: 100%; /* Чтобы поле ввода занимало всю ширину */
-  margin: 0; /* Убираем возможные отступы */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
-}
-
-.submitButton {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
+  width: 100%; 
+  margin: 0; 
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  background-color: #111;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.input:focus {
+  outline: none;
+}
+.submitButton {
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 
+               0 0 20px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
-  width: 100%; /* Кнопка тоже будет занимать всю ширину */
+  width: 50%; 
+  margin: 0 100px;
+  background-image: linear-gradient(20deg, #ff6347, #ff1493, #1e90ff, #32cd32); 
+  background-size: 400% 400%;
+  transition: all 0.9s ease;
 }
-
 .submitButton:hover {
-  background-color: #45a049;
+  background-position: 100% 100%;
+  transform: scale(1.05);
+}
+.submitButton:focus {
+  outline: none;
+}
+.error {
+  color: #ff1493;
+  font-size: 12px;
 }
 
-.error {
-  color: red;
-  font-size: 12px;
+input:-webkit-autofill {
+  background-color: black !important; 
+  color: white !important; 
+  -webkit-box-shadow: 0 0 0px 1000px black inset; 
+}
+
+input:-webkit-autofill:focus {
+  background-color: black !important;
+  -webkit-box-shadow: 0 0 0px 1000px black inset;
+}
+
+input:-webkit-autofill::first-line {
+  color: white !important;
 }

@@ -1,0 +1,25 @@
+.searchBox {
+  margin: 40px auto; 
+  width: 80%; 
+  max-width: 400px; 
+}
+.searchBox label {
+  display: block; 
+  margin-bottom: 15px; 
+  font-size: 16px;
+  color: #fff;
+}
+.searchBox input {
+  width: 95%; 
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 50px;
+  background-color: #111; 
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.8s ease; 
+}
+.searchBox input:focus {
+  background-color: rgba(255, 255, 255, 0.1); 
+}

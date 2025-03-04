@@ -43,7 +43,7 @@ export default function App() {
   );
   
   return (
-    <div>
+    <div className="container">
       <h1>Phonebook</h1>
       <ContactForm
         onAddContact={handleAddContact}
