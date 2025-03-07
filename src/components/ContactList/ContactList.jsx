@@ -1,28 +1,33 @@
-import { FaUser, FaPhone, FaTrash } from "react-icons/fa";
+//import { FaUser, FaPhone, FaTrash } from "react-icons/fa";
+import PropTypes from "prop-types";
+import Contact from "../Contact/Contact";
 import styles from "./ContactList.module.css";
 
 const ContactList = ({ contacts, onDelete }) => {
   return (
     <ul className={styles.list}>
       {contacts.map(({ id, name, number }) => (
-        <li key={id} className={styles.item}>
-          <div className={styles.contactDetails}>
-            <div className={styles.contactInfo}>
-              <FaUser />
-              <span className={styles.name}>{name}</span>
-            </div>
-            <div className={styles.contactInfo}>
-              <FaPhone />
-              <span className={styles.number}>{number}</span>
-            </div>
-          </div>
-          <button onClick={() => onDelete(id)} className={styles.deleteButton}>Delete
-            <FaTrash/>
-          </button>
-        </li>
+        <Contact
+          key={id}
+          id={id}
+          name={name}
+          number={number}
+          onDelete={onDelete}
+      /> 
       ))}
     </ul>
   );
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default ContactList;

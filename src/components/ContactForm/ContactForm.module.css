@@ -40,6 +40,7 @@ label {
   box-sizing: border-box;
   background-color: #111;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  color: white;
 }
 .input:focus {
   outline: none;
@@ -77,12 +78,11 @@ input:-webkit-autofill {
   color: white !important; 
   -webkit-box-shadow: 0 0 0px 1000px black inset; 
 }
-
 input:-webkit-autofill:focus {
   background-color: black !important;
   -webkit-box-shadow: 0 0 0px 1000px black inset;
 }
-
 input:-webkit-autofill::first-line {
   color: white !important;
 }
+

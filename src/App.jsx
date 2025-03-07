@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Contact from "./components/Contact/Contact";
 import ContactList from "./components/ContactList/ContactList";
 import SearchBox from "./components/SearchBox/SearchBox";
 import "./App.css";
@@ -45,17 +46,9 @@ export default function App() {
   return (
     <div className="container">
       <h1>Phonebook</h1>
-      <ContactForm
-        onAddContact={handleAddContact}
-      />
-      <SearchBox
-        value={filter}
-        onChange={handleFilterChange}
-      />
-      <ContactList
-        contacts={filteredContacts}
-        onDelete={handleDeleteContact}
-      />
+      <ContactForm onAddContact={handleAddContact} />
+      <SearchBox value={filter} onChange={handleFilterChange} />
+      <ContactList contacts={filteredContacts} onDelete={handleDeleteContact} />
     </div>
   );
 }
